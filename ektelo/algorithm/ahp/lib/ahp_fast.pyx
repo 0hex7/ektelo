@@ -42,7 +42,7 @@ def ahpr(x, epsilon, ratio, eta, prng, debug=False):
         group = [orig_indexes[k] for k in range(i,j)]
         total = sum(x[i] for i in group)
         if debug:
-            print 'group =', group, 'total =', total
+            print('group =', group, 'total =', total)
         avg = (total + prng.laplace(0, 1/eps2)) / size
         for i in group:
             noisyx[i] = avg
